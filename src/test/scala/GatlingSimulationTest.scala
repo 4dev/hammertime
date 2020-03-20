@@ -15,6 +15,9 @@ class GatlingSimulationTest extends Simulation {
     .exec(
       http("Bocking call")
         .get("blocking/attack")
+//        .get("callable/deferred/attack")
+//        .get("deferred/attack")
+//        .get("callable/attack")
         .check(status.is(200))
     ).pause(Duration.apply(5, TimeUnit.MILLISECONDS))
 
